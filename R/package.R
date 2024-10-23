@@ -67,7 +67,7 @@ install_torchoptx <- function(url = Sys.getenv("TORCHOPTX_URL", unset = NA)) {
     os <- get_cmake_style_os()
     dev <- if (torch::cuda_is_available()) "cu" else "cpu"
 
-    url <- sprintf("https://github.com/mlverse/torchoptx/releases/download/libtorchoptx/torchoptx-%s+%s-%s.zip",
+    url <- sprintf("https://github.com/dfalbel/torchoptx/releases/download/libtorchoptx/torchoptx-%s+%s-%s.zip",
                    version, dev, os)
   }
 

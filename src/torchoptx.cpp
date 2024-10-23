@@ -47,3 +47,8 @@ void optim_adam_step (torchoptx::optim_adam opt) {
 void optim_adam_zero_grad (torchoptx::optim_adam opt) {
   return rcpp_torchoptx_adam_zero_grad(opt);
 }
+
+// [[Rcpp::export]]
+void optim_adam_step2 (torchoptx::optim_adam opt) {
+  return rcpp_torchoptx_adam_step2(opt);
+}

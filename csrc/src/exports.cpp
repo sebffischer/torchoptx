@@ -56,6 +56,13 @@ TORCHOPTX_API void _torchoptx_adam_zero_grad (void* opt) {
   } TORCHOPTX_HANDLE_EXCEPTION
   
 }
+void torchoptx_adam_step2 (optim_adam opt);
+TORCHOPTX_API void _torchoptx_adam_step2 (void* opt) {
+  try {
+     (torchoptx_adam_step2(from_raw::Adam(opt)));
+  } TORCHOPTX_HANDLE_EXCEPTION
+  
+}
 void delete_optim_sgd (void* x);
 TORCHOPTX_API void _delete_optim_sgd (void* x) {
   try {

@@ -9,5 +9,6 @@ void rcpp_torchoptx_sgd_zero_grad (torchoptx::optim_sgd opt);
 torchoptx::optim_adam rcpp_torchoptx_adam (torch::TensorList params, double lr, double betas0, double betas1, double eps, double weight_decay, bool amsgrad);
 void rcpp_torchoptx_adam_step (torchoptx::optim_adam opt);
 void rcpp_torchoptx_adam_zero_grad (torchoptx::optim_adam opt);
+void rcpp_torchoptx_adam_step2 (torchoptx::optim_adam opt);
 void rcpp_delete_optim_sgd (void* x);
 void rcpp_delete_optim_adam (void* x);

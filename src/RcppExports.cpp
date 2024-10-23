@@ -84,6 +84,16 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// rcpp_torchoptx_adam_step2
+void rcpp_torchoptx_adam_step2(torchoptx::optim_adam opt);
+RcppExport SEXP _torchoptx_rcpp_torchoptx_adam_step2(SEXP optSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< torchoptx::optim_adam >::type opt(optSEXP);
+    rcpp_torchoptx_adam_step2(opt);
+    return R_NilValue;
+END_RCPP
+}
 // rcpp_delete_optim_sgd
 void rcpp_delete_optim_sgd(void* x);
 RcppExport SEXP _torchoptx_rcpp_delete_optim_sgd(SEXP xSEXP) {
@@ -177,6 +187,16 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// optim_adam_step2
+void optim_adam_step2(torchoptx::optim_adam opt);
+RcppExport SEXP _torchoptx_optim_adam_step2(SEXP optSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< torchoptx::optim_adam >::type opt(optSEXP);
+    optim_adam_step2(opt);
+    return R_NilValue;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_torchoptx_rcpp_torchoptx_sgd", (DL_FUNC) &_torchoptx_rcpp_torchoptx_sgd, 6},
@@ -185,6 +205,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_torchoptx_rcpp_torchoptx_adam", (DL_FUNC) &_torchoptx_rcpp_torchoptx_adam, 7},
     {"_torchoptx_rcpp_torchoptx_adam_step", (DL_FUNC) &_torchoptx_rcpp_torchoptx_adam_step, 1},
     {"_torchoptx_rcpp_torchoptx_adam_zero_grad", (DL_FUNC) &_torchoptx_rcpp_torchoptx_adam_zero_grad, 1},
+    {"_torchoptx_rcpp_torchoptx_adam_step2", (DL_FUNC) &_torchoptx_rcpp_torchoptx_adam_step2, 1},
     {"_torchoptx_rcpp_delete_optim_sgd", (DL_FUNC) &_torchoptx_rcpp_delete_optim_sgd, 1},
     {"_torchoptx_rcpp_delete_optim_adam", (DL_FUNC) &_torchoptx_rcpp_delete_optim_adam, 1},
     {"_torchoptx_optim_sgd_new", (DL_FUNC) &_torchoptx_optim_sgd_new, 6},
@@ -193,6 +214,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_torchoptx_optim_adam_new", (DL_FUNC) &_torchoptx_optim_adam_new, 7},
     {"_torchoptx_optim_adam_step", (DL_FUNC) &_torchoptx_optim_adam_step, 1},
     {"_torchoptx_optim_adam_zero_grad", (DL_FUNC) &_torchoptx_optim_adam_zero_grad, 1},
+    {"_torchoptx_optim_adam_step2", (DL_FUNC) &_torchoptx_optim_adam_step2, 1},
     {NULL, NULL, 0}
 };
 

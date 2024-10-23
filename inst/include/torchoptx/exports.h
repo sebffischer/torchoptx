@@ -33,6 +33,7 @@ TORCHOPTX_API void _torchoptx_sgd_zero_grad (void* opt);
 TORCHOPTX_API void* _torchoptx_adam (void* params, double lr, double betas0, double betas1, double eps, double weight_decay, bool amsgrad);
 TORCHOPTX_API void _torchoptx_adam_step (void* opt);
 TORCHOPTX_API void _torchoptx_adam_zero_grad (void* opt);
+TORCHOPTX_API void _torchoptx_adam_step2 (void* opt);
 TORCHOPTX_API void _delete_optim_sgd (void* x);
 TORCHOPTX_API void _delete_optim_adam (void* x);
 
@@ -64,6 +65,11 @@ inline void torchoptx_adam_step (void* opt) {
 }
 inline void torchoptx_adam_zero_grad (void* opt) {
    _torchoptx_adam_zero_grad(opt);
+  host_exception_handler();
+  
+}
+inline void torchoptx_adam_step2 (void* opt) {
+   _torchoptx_adam_step2(opt);
   host_exception_handler();
   
 }

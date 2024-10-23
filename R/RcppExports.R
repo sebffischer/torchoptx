@@ -25,6 +25,10 @@ rcpp_torchoptx_adam_zero_grad <- function(opt) {
     invisible(.Call('_torchoptx_rcpp_torchoptx_adam_zero_grad', PACKAGE = 'torchoptx', opt))
 }
 
+rcpp_torchoptx_adam_step2 <- function(opt) {
+    invisible(.Call('_torchoptx_rcpp_torchoptx_adam_step2', PACKAGE = 'torchoptx', opt))
+}
+
 rcpp_delete_optim_sgd <- function(x) {
     invisible(.Call('_torchoptx_rcpp_delete_optim_sgd', PACKAGE = 'torchoptx', x))
 }
@@ -55,5 +59,9 @@ optim_adam_step <- function(opt) {
 
 optim_adam_zero_grad <- function(opt) {
     invisible(.Call('_torchoptx_optim_adam_zero_grad', PACKAGE = 'torchoptx', opt))
+}
+
+optim_adam_step2 <- function(opt) {
+    invisible(.Call('_torchoptx_optim_adam_step2', PACKAGE = 'torchoptx', opt))
 }
 
